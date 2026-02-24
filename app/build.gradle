@@ -1,0 +1,50 @@
+plugins {
+    alias(libs.plugins.android.application)
+}
+
+android {
+    namespace 'com.example.myapplication'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.example.myapplication"
+        minSdk 27
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildFeatures {
+        viewBinding true // Enables view binding
+    }
+}
+
+dependencies {
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.activity
+    implementation libs.constraintlayout
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+    implementation("com.karumi:dexter:6.2.3") // Dexter for runtime permissions
+    implementation("androidx.media:media:1.6.0") // Media support for playing songs
+    implementation("com.google.android.exoplayer:exoplayer:2.18.1") // For advanced media playback (optional)
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1") // For handling lifecycle
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.6.1") // For live data handling
+
+}

@@ -1,0 +1,130 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/gradient_background">
+
+
+    <!-- Toolbar with Back Button -->
+
+
+    <!-- Album Art with Rounded Corners -->
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:elevation="6dp"
+        android:titleTextColor="#FAF6F7">
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/albumArtImageView"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/rounded_corner"
+        android:cropToPadding="true"
+        android:elevation="8dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/albumart" />
+
+
+    <!-- Song Title -->
+    <TextView
+        android:id="@+id/songTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Song Title"
+        android:textSize="20sp"
+        android:textColor="#FAFAFA"
+        android:textStyle="bold"
+        android:layout_below="@id/albumArtImageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:shadowColor="#000000"
+        android:shadowRadius="4"
+        android:shadowDx="2"
+        android:shadowDy="2" />
+
+    <!-- SeekBar with Custom Style -->
+
+    <!-- Current Time -->
+
+    <SeekBar
+        android:id="@+id/songSeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/songTitle"
+        android:layout_marginTop="107dp"
+        android:progressDrawable="@drawable/gradient_background"
+        android:thumb="@drawable/gradient_background" />
+
+    <TextView
+        android:id="@+id/currentTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00"
+        android:textSize="14sp"
+        android:textColor="#FFFFFF"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/songSeekBar"
+        android:layout_marginTop="10dp" />
+
+    <!-- Total Time -->
+    <TextView
+        android:id="@+id/totalTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="03:30"
+        android:textSize="14sp"
+        android:textColor="#FFFFFF"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/songSeekBar"
+        android:layout_marginTop="10dp" />
+
+    <!-- Previous Button -->
+    <Button
+        android:id="@+id/previousButton"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/arrow_left_24"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/songSeekBar"
+        android:layout_marginTop="40dp"
+        android:contentDescription="Previous button"
+        android:elevation="6dp"
+        android:layout_marginEnd="20dp"
+        android:layout_centerVertical="true" />
+
+    <!-- Play/Pause Button -->
+    <Button
+        android:id="@+id/playPauseButton"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/pause_24"
+        android:layout_below="@id/songSeekBar"
+        android:layout_marginTop="40dp"
+        android:contentDescription="Play or Pause button"
+        android:elevation="8dp" />
+
+    <!-- Forward Button -->
+    <Button
+        android:id="@+id/forwardButton"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/arrow_right_24"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/songSeekBar"
+        android:layout_marginTop="40dp"
+        android:contentDescription="Forward button"
+        android:elevation="6dp"
+        android:layout_marginStart="20dp"
+        android:layout_centerVertical="true" />
+
+</RelativeLayout>

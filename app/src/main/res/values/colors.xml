@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="gray">#CCCCCC</color>
+    <color name="light_gray">#F5F5F5</color>
+    <color name="button_pressed">#FF5722</color> <!-- Color for pressed state -->
+    <color name="button_default">#6200EE</color> <!-- Default button color -->
+    <color name="colorAccent">#FF4081</color> <!-- You can change this color code to your desired accent color -->
+    <color name="colorPrimary">#212121</color> <!-- Dark background for the music player -->
+    <color name="colorPrimaryDark">#1C1C1C</color> <!-- Darker background for the status bar -->
+    <color name="colorBackground">#212121</color> <!-- Background for the app -->
+</resources>

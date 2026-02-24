@@ -1,0 +1,5 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#5AC8FA" /> <!-- Light teal/blue to match the gradient -->
+    <corners android:radius="50dp" />
+    <elevation android:radius="8dp" />
+</shape>
